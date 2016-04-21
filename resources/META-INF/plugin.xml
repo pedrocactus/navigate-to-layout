@@ -1,0 +1,33 @@
+<idea-plugin version="2">
+  <id>fr.idapps.intellij.plugin.android.gotolayout</id>
+  <name>Go to layout xml</name>
+  <version>1.0</version>
+  <vendor email="" url="http://www.id-apps.fr">ID.apps</vendor>
+
+  <description><![CDATA[
+      This plugin parses your android file (Activity or Fragment) to navigate to the corresponding inflated layout xml file
+    ]]></description>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+
+    <action id="gtlayout" class="fr.idapps.intellij.plugin.navigatetolayout.GoToLayoutAction" text="Go to xml layout "
+            description="This action parses your android file (Activity or Fragment) to navigate to the corresponding inflated layout xml file">
+      <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt COLON"/>
+    </action>
+  </actions>
+
+</idea-plugin>
